@@ -1,5 +1,6 @@
 # Slack2Jira
 MCP Hackathon - Slack -> Jira
+
 This repo aims to create an integration layer between the existing Slack MCP and Jira MCP, enabling seamless ticket creation in Jira directly from Slack discussions. The solution will enhance team efficiency by allowing users to open Jira tickets without leaving Slack, while preserving discussion context within the tickets.
 
 Define Use Case & Requirements: We will outline the business use case for integrating the Slack and Jira MCPs, focusing on automated ticket creation and context retention. Acceptance criteria and a clear Definition of Done (DoD) will be established. Comprehensive documentation, including workflows and data mapping, will be provided in Jira and the project’s README file.
