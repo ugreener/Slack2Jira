@@ -27,3 +27,5 @@ In the future the agent will also
          - check if a Jira is open for similar problem and provide this info in slack discussion
 
 Deliver Functional Integration Layer: We will deliver a fully operational integration layer that connects the existing Slack MCP and Jira MCP. This layer will include all necessary tooling, API integrations, and database support to enable ticket creation, status syncing, and seamless data flow between Slack and Jira, preserving context like messages, users, and attachments.
+
+Link to Google Doc: https://docs.google.com/document/d/1JNdvWRqqO6ZmzfGQbMCbB2qG5Qpy4Fs5ftviRT_bMhQ/edit?tab=t.0#heading=h.eqn641rxzrve
