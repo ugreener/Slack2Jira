@@ -143,6 +143,55 @@ response = agent.create_turn(
 
 ## 🔧 Configuration
 
+### MCP Configuration Example
+
+To use this workflow agent, you'll need to configure MCP servers for both Slack and Jira. Here's an example `mcp.json` configuration:
+
+```json
+{
+  "mcpServers": {
+    "jira": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "JIRA_URL",
+        "-e", "JIRA_PERSONAL_TOKEN",
+        "ghcr.io/sooperset/mcp-atlassian:latest"
+      ],
+      "env": {
+        "JIRA_PERSONAL_TOKEN": "<example_personal_token>",
+        "JIRA_URL": "https://<example_instance>.atlassian.net"
+      }
+    },
+    "slack": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "SLACK_BOT_TOKEN",
+        "-e",
+        "SLACK_TEAM_ID", 
+        "-e",
+        "SLACK_CHANNEL_IDS",
+        "mcp/slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "<example_bot_token>",
+        "SLACK_TEAM_ID": "<example_team_id>",
+        "SLACK_CHANNEL_IDS": "<example_channel_id>"
+      }
+    }
+  }
+}
+```
+
+**Note**: Replace the `<example_*>` placeholders with your actual credentials and configuration values.
+
 ### Tool Registration
 
 The system automatically registers MCP tools if they're not already available:
